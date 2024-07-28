@@ -67,7 +67,12 @@ const ProgressDetail: FC<ProgressDetailProps> = ({
         );
       }
     });
-  }, [max]);
+  }, [
+    max,
+    current,
+    predicted,
+    risk,
+  ]);
   return <div className="progressDetail">{progressRender}</div>;
 };
 
