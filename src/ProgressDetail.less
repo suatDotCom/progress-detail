@@ -1,0 +1,84 @@
+@default-bar-width: 1vw;
+@default-bar-min-width: 1px;
+@default-bar-height: 5vh;
+@default-bar-min-height: 5px;
+
+.progressDetail {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+
+  gap: 0.5px;
+
+  .hoverDescription {
+    transition-property: width;
+    transition-duration: 0.3s;
+    cursor: pointer;
+
+    .description {
+      display: none;
+      background-color: #3e4c59;
+      color: #ffffff;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-size: 0.2rem;
+    }
+
+    &:hover {
+      width: 20px !important;
+      height: 8px !important;
+      .description {
+        display: flex !important;
+      }
+    }
+  }
+
+  .defaultBar {
+    width: @default-bar-width;
+    height: @default-bar-height;
+    // min-width: @default-bar-min-width;
+    // min-height: @default-bar-min-height;
+    background-color: #8996a4;
+  }
+
+  .riskBar {
+    width: @default-bar-width;
+    height: @default-bar-height;
+    // min-width: @default-bar-min-width;
+    // min-height: @default-bar-min-height;
+    background-color: #3e4c59;
+  }
+
+  .current {
+    font-size: 0.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: -5px 3px 0 3px;
+    color: #52606d;
+  }
+
+  .futureBar {
+    width: @default-bar-width;
+    height: @default-bar-height;
+    // min-width: @default-bar-min-width;
+    // min-height: @default-bar-min-height;
+    background-color: #e4e7eb;
+  }
+
+  .predictedBar {
+    width: 3vw;
+    min-width: 6px;
+    height: 5vh;
+    min-height: 6px;
+    background-color: #69b1ff;
+    color: #253e59;
+    font-size: 0.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
